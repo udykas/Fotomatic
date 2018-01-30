@@ -8,7 +8,6 @@ html {
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
-  background-image: url(../images/banner-landingpage.jpg);
 }
 
 .center {
@@ -123,6 +122,10 @@ header .mobile {
   justify-content: flex-start;
   align-items: center;
   height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #sign-up-cta {
@@ -273,13 +276,24 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #features-section {
-    flex-flow: column;
-    padding: 0;
+    padding: 1.25rem 1rem;
+  }
+
+  .feature {
+    margin: 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  #features-section {
+    flex-direction: column;
+    width: 90%;
+    padding: 1.25rem 1rem;
   }
 
   .feature {
     margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
   }
 }
 
@@ -314,7 +328,7 @@ header .mobile {
   padding: 0 1%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 590px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
@@ -336,7 +350,8 @@ header .mobile {
   }
 
   #filters-section .images-container {
-    padding: 0;
+    padding: 3% 1%;
+    width: 98%;
   }
 
   #filters-section .extra {
@@ -353,7 +368,6 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
-  margin:
 }
 
 #quotes-section .content.center {
@@ -370,7 +384,7 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
@@ -383,20 +397,26 @@ header .mobile {
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
   }
+
+  #quotes-section .content.center {
+    padding: 1rem;
+    padding-top: 40px;
+  }
+
 }
 
 /* Footer */
